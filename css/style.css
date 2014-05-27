@@ -1,0 +1,119 @@
+/*---------------------------------------------------------------------------------
+ 1. Global styles
+-------------------------------------------------------------------------------*/
+html * {
+  font-family: 'Merriweather Sans', sans-serif !important;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 28px;
+	color: #2c3e50;
+}
+
+#hcard {
+	border: 1px solid #b0b8bc;
+	margin-bottom: 50px;
+}
+
+/*---------------------------------------------------------------------------------
+ 2. hCard Builder
+-------------------------------------------------------------------------------*/
+.hcard-builder {
+	padding: 15px 40px 0px;
+}
+.hcard-builder label {
+	font-size: 12px;
+	color: #2c3e50;
+	font-weight: 300;
+}
+.hcard-builder h3 {
+	font-size: 10px;
+	font-weight: bold;
+	color: #b0b8bc;
+	margin-bottom: 5px;
+}
+.hcard-builder .form-group {
+	margin-top: -8px;
+}
+.hcard-builder-subtitle {
+	border-bottom: 1px solid #b0b8bc;
+	margin-bottom: 25px;
+}
+
+/*---------------------------------------------------------------------------------
+ 3. hCard Preview
+-------------------------------------------------------------------------------*/
+.hcard-preview {
+	background: #e1e4e7;
+	padding: 110px 45px 0px;
+	height: 620px;
+}
+
+/*---------------------------------------------------------------------------------
+ 3.1 Section - hCard Preview Header
+-------------------------------------------------------------------------------*/
+.hcard-preview-header h1 {
+	font-size: 16px;
+	font-weight: 200;
+	color: #95a5a6;
+	padding-bottom: 10px;
+}
+
+/*---------------------------------------------------------------------------------
+ 3.2 Section - hCard Preview Name
+-------------------------------------------------------------------------------*/
+.hcard-preview-name {
+	height: 70px;
+	background: #2c3e50;
+	color: #ffffff;
+}
+.hcard-preview-name h2 {
+	font-weight: 400;
+	font-size: 24px;
+	padding: 5px 0px 0px 35px;
+}
+
+/*---------------------------------------------------------------------------------
+ 3.3 Section - hCard Preview Content
+-------------------------------------------------------------------------------*/
+.hcard-preview-content {
+	background: #ffffff;
+	border-bottom: 2px solid #9a9a9a;
+	padding: 10px 0px 30px 0px;
+}
+.hcard-preview-content .row {
+	margin: 0px 25px;
+	border-bottom: 1px solid #dbe0e2;
+}
+.hcard-preview-content h3 {
+	font-size: 10px;
+	color: #34495e;
+	margin: 15px 0px 5px -15px;
+}
+.hcard-preview-content h4 {
+	font-size: 16px;
+	color: #000000;
+	margin-bottom: 0px;
+}
+
+/*---------------------------------------------------------------------------------
+ 4. Extra styles
+-------------------------------------------------------------------------------*/
+.hidden-row h4 {
+	height: 20px;
+}
+.btn-hcard {
+	margin: 15px 0px 22px 0px;
+	width: 190px;
+	font-size: 18px;
+	background: #3498db;
+	color: #ffffff !important;
+	border-bottom: 2px solid #2980b9;
+}
+
+.btn-hcard:hover {
+	background: #3498db;
+	color: #ffffff;
+	border-bottom: 2px solid #2980b9;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="hCard">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hCard Builder</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.4/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </head>
+  <body>
+    <div data-ng-controller="data">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="page-header">hCard
+                <small>Test For Fairfax</small>
+            </h1>
+          </div>
+        </div>
+        <div id="hcard" class="row">
+          <div class="col-lg-6 col-md-6 builder-item hcard-builder">
+            <form name="hCardForm" novalidate role="form">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>hCard Builder</h1>
+                </div>
+              </div>
+              <section class="hcard-builder-subtitle">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>PERSONAL DETAILS</h3>
+                  </div>
+                </div>
+              </section>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">GIVEN NAME</label>
+                    <input type="text" name="name" data-ng-model="name" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">SURNAME</label>
+                    <input type="text" name="name" data-ng-model="surname" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="text" name="email" data-ng-model="email" class="form-control" />  
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">PHONE</label>
+                    <input type="text" name="name" data-ng-model="phone" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <section class="hcard-builder-subtitle">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>ADDRESS</h3>
+                  </div>
+                </div>
+              </section>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">HOUSE NAME OR #</label>
+                    <input type="text" name="name" data-ng-model="houseName" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">STREET</label>
+                    <input type="text" name="name" data-ng-model="street" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">SUBURB</label>
+                    <input type="text" name="name" data-ng-model="suburb" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">STATE</label>
+                    <input type="text" name="name" data-ng-model="state" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">POSTCODE</label>
+                    <input type="text" name="name" data-ng-model="postcode" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">COUNTRY</label>
+                    <input type="text" name="name" data-ng-model="country" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="text-center">
+                    <button data-ng-disabled="progress.active()" data-ng-click="submit(hCardForm)" class="btn btn-hcard">Create hCard</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 col-md-6 builder-item hcard-preview">
+            <section class="hcard-preview-header text-right">
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <h1>HCARD PREVIEW</h1>
+                </div>
+              </div>
+            </section>
+            <section class="hcard-preview-name">
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <h2><span data-ng-bind="name"></span> <span data-ng-bind="surname"></span></h2>
+                </div>
+              </div>
+            </section>
+            <section class="hcard-preview-content">
+              <div class="row">
+                <div class="col-lg-2 col-md-2">
+                  <h3>EMAIL</h3>
+                </div>
+                <div class="ccol-lg-10 col-md-10">
+                  <h4><span data-ng-bind="email"></span></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2 col-md-2">
+                  <h3>PHONE</h3>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                  <h4><span data-ng-bind="phone"></span></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2 col-md-2">
+                  <h3>ADDRESS</h3>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                   <h4><span data-ng-bind="houseName"></span> <span data-ng-bind="street"></span></h4>
+                </div>
+              </div>
+              <div class="hidden-row">
+                <div class="row">
+                  <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2">
+                    <h4><span data-ng-bind="suburb"></span> <span data-ng-bind="state"></span></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2 col-md-2 hidden-xs hidden-sm">
+                  <h3>POSTCODE</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 hidden-xs hidden-sm">
+                  <h4><span data-ng-bind="postcode"></span></h4>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                  <h3>COUNTRY</h3>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <h4><span data-ng-bind="country"></span></h4>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
